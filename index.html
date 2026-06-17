@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass UI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SIDEBAR : barre latérale fixe -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">◆</span>
+            <span class="logo-text">Nebula</span>
+        </div>
+        <nav class="nav-menu">
+            <p style="color: rgba(255, 255, 255, 0.5); font-size: 15px;">menu</p>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">tableau de bord</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">analyses</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span class="nav-label">projets</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👥</span>
+                <span class="nav-label">clients</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">💰</span>
+                <span class="nav-label">facturation</span>
+            </a>
+            <p style="color: rgba(255, 255, 255, 0.5); font-size: 15px;">général</p>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Paramètres</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">❓</span>
+                <span class="nav-label">aide</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="main-content">
+        <!-- TOPBAR : barre du haut floutée -->
+        <header class="topbar">
+            <h1>Vue d'ensemble</h1>
+            <div class="topbar-right">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Rechercher...">
+                </div>
+                <div class="user-avatar">
+                    <span class="avatar-initials">Usr</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- GRILLE DE CARTES -->
+        <div class="card-grid">
+            <div class="card">
+                <h3>Revenus</h3>
+                <p class="card-value">€12,430</p>
+                <p class="card-label">+12% ce mois</p>
+            </div>
+            <div class="card">
+                <h3>Utilisateurs</h3>
+                <p class="card-value">2,847</p>
+                <p class="card-label">+8% cette semaine</p>
+            </div>
+            <div class="card">
+                <h3>Convertions</h3>
+                <p class="card-value">438</p>
+                <p class="card-label">+23% vs hier</p>
+            </div>
+            <div class="card">
+                <h3>Taux d'attrition</h3>
+                <p class="card-value">18,204</p>
+                <p class="card-label">+5% ce mois</p>
+            </div>
+            <!-- Grande carte en dessous -->
+            <div class="card card-large">
+                <h3>Revenu sur les 8 derniers mois</h3>
+                <div class="chart">
+                    <div class="bar" style="height: 60px;"></div>
+                    <div class="bar" style="height: 85px;"></div>
+                    <div class="bar" style="height: 72px;"></div>
+                    <div class="bar" style="height: 105px;"></div>
+                    <div class="bar" style="height: 95px;"></div>
+                    <div class="bar" style="height: 125px;"></div>
+                    <div class="bar" style="height: 115px;"></div>
+                    <div class="bar" style="height: 145px;"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>activité récente</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon"></div>
+                        <div class="activity-content">
+                            <div class="activity-title">Nouveau client</div>
+                            <div class="activity-info">Studio Aurora • il y a 2 min</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"></div>
+                        <div class="activity-content">
+                            <div class="activity-title">Paiement reçu</div>
+                            <div class="activity-info">1 200 € • il y a 18 min</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"></div>
+                        <div class="activity-content">
+                            <div class="activity-title">Montée en gamme</div>
+                            <div class="activity-info">Forfait Pro • il y a 1 h</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"></div>
+                        <div class="activity-content">
+                            <div class="activity-title">Ticket résolu</div>
+                            <div class="activity-info">n° 4821 • il y a 3 h</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

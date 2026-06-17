@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+}
+.sidebar {
+    width: 240px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* LOGO en haut de la sidebar */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: #a78bfa;
+}
+
+/* MENU DE NAVIGATION */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;              /* pousse le footer vers le bas */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-item.active {
+    background: rgba(167, 139, 250, 0.2);
+    color: #a78bfa;
+}
+
+/* FOOTER de la sidebar (déconnexion) */
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-footer:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* ZONE PRINCIPALE (à droite de la sidebar) */
+.main-content {
+    flex: 1;              /* prend tout l'espace restant */
+    padding: 24px 32px;
+}
+
+/* TOPBAR - barre du haut floutée (pleine largeur) */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: -24px -32px 32px -32px;
+}
+
+.topbar h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* BARRE DE RECHERCHE */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 8px 16px;
+    backdrop-filter: blur(10px);
+}
+
+.search-icon {
+    font-size: 16px;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    width: 160px;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* AVATAR ROND AVEC INITIALES */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+/* GRILLE DE CARTES RESPONSIVE */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* CARTES STYLE GLASSMORPHISM */
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 20px;
+    padding: 24px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.card-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Grande carte sur toute la largeur */
+.card-large {
+    grid-column: span 3;
+    min-height: 180px;
+    padding: 32px;
+}
+
+/* ANIMATION AU SURVOL - la carte se soulève */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 26px 50px rgba(124, 58, 237, 0.40);
+    border-color: rgba(167, 139, 250, 0.55);
+}
+.chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    height: 160px;
+    margin-top: 20px;
+}
+
+.bar {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(
+        to top,
+        rgba(124, 58, 237, 0.5),
+        rgba(167, 139, 250, 0.95)
+    );
+    transition: all 0.3s ease;
+}
+
+.bar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+}
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.activity-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.12);
+}
+.activity-content {
+    display: flex;
+    flex-direction: column;
+}
+.activity-title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.activity-info {
+    color: rgba(255,255,255,0.45);
+    font-size: 13px;
+}
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
